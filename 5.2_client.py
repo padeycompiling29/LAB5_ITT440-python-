@@ -1,5 +1,4 @@
 import socket
-import string 
 
 ClientSocket=socket.socket()
 host='192.168.43.200'
@@ -15,7 +14,7 @@ Response=ClientSocket.recv(1024)
 print(Response)
 
 while True:
-	keyin=input( "Say something:  " )
+	keyin=raw_input( "Say something:  " )
 	ClientSocket.send(str.encode(keyin))
 	Response=ClientSocket.recv(1024)
 	print(Response.decode('utf-8'))
