@@ -24,7 +24,7 @@ def threaded_client(connection):
 		if not data:
 			break
 
-		connection.sendall(str.encode(reply))
+		connection.sendall(reply.encode('utf-8'))
 	connection.close()
 
 while True:
